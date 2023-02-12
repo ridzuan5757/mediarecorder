@@ -21,6 +21,11 @@ qt_add_qml_module(appVideoRecorder
     MediaList.qml
     StyleRectangle.qml
     Controls.qml
+    AudioInputSelect.qml
+    CameraSelect.qml
+    RecordButton.qml
+    SettingsEncoder.qml
+    StyleParameter.qml
 )
 
 set_target_properties(appVideoRecorder PROPERTIES

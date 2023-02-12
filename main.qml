@@ -115,10 +115,17 @@ Window {
         ColumnLayout {
             anchors.fill: parent
 
-            Control {
+            Controls {
                 id: controls
                 Layout.alignment: Qt.AlignHCenter
                 recorder: recorder
+            }
+
+            StyleRectangle {
+                Layout.alignment: Qt.AlignHCenter
+                visible: controls.settingVisible
+                width: controls.width
+                height: 1
             }
         }
     }
