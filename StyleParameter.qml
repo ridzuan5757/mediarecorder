@@ -1,10 +1,12 @@
 import QtQuick
 import QtQuick.Controls
 
-Item {
+Row {
     id: root
     spacing: Style.intraSpacing
     property bool enabled: true
+    property alias label: label.text
+    property alias model: comboBox.model
     property alias currentIndex: comboBox.currentIndex
     property alias currentValue: comboBox.currentValue
 

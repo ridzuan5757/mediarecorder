@@ -127,6 +127,14 @@ Window {
                 width: controls.width
                 height: 1
             }
+
+            SettingsEncoder {
+                id: settingEncoder
+                Layout.alignment: Qt.AlignHCenter
+                visible: controls.settingVisible
+                width: controls.width
+                height: 1
+            }
         }
     }
 }
