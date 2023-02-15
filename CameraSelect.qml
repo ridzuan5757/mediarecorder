@@ -33,7 +33,7 @@ Row {
         }
         displayText: typeof currentValue === "undefined" ? "Unavailable" : currentValue.description
         font.pointSize: Style.fontSize
-        textRole: qsTr("Description")
+        textRole: "Description"
         onCurrentValueChanged: {
             if (typeof comboBox.currentValue !== "undefined") {
                 camera.cameraDevice = currentValue

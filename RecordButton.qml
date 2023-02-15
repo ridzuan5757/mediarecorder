@@ -23,7 +23,7 @@ Item {
         anchors.centerIn: parent
         color: "red"
         width: recording ? innerRadius * 2 - 15 : innerRadius * 2
-        height: recording ? innerRadius * 2 - 15 : innerRaidus * 2
+        height: recording ? innerRadius * 2 - 15 : innerRadius * 2
         radius: recording ? 2 : innerRadius
 
         Behavior on width {

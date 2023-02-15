@@ -7,8 +7,8 @@ Window {
     id: root
     visible: true
     title: qsTr("Video Recorder")
-    width: Style.width
-    height: Style.height
+    width: Style.screenWidth
+    height: Style.screenHeight
 
     onWidthChanged: {
         Style.calculateRatio(root.width, root.height)
@@ -64,7 +64,6 @@ Window {
         anchors.fill: parent
         anchors.margins: 50
         active: {
-
             controls.captureVisible
         }
     }
@@ -73,11 +72,11 @@ Window {
         id: mediaListFrame
         height: 150
         width: parent.width
-        anchors.bottom: controlFrame.top
+        anchors.bottom: controlsFrame.top
         x: controls.capturesVisible ? 0 : parent.width
         background: Rectangle {
             anchors.fill: parent
-            color: "blue"
+            color: "white"
             opacity: 0.8
         }
 
@@ -100,10 +99,12 @@ Window {
         anchors.right: parent.right
         anchors.bottom: parent.bottom
         height: controls.height + Style.interSpacing * 2
+                + (settingEncoder.visible ? settingEncoder.height : 0)
+                + (settingsMetaData.visible ? settingsMetaData.height : 0)
         background: Rectangle {
             anchors.fill: parent
-            color: "green"
-            opacity: 0.0
+            color: "white"
+            opacity: 0.8
         }
 
         Behavior on height {
@@ -132,8 +133,15 @@ Window {
                 id: settingEncoder
                 Layout.alignment: Qt.AlignHCenter
                 visible: controls.settingVisible
-                width: controls.width
-                height: 1
+                padding: Style.interSpacing
+                recorder: recorder
+            }
+
+            SettingsMetaData {
+                id: settingsMetaData
+                Layout.alignment: Qt.AlignCenter
+                visible: !Style.isMobile() && controls.settingVisible
+                recorder: recorder
             }
         }
     }

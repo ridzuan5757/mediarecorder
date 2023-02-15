@@ -26,7 +26,7 @@ Item {
         id: comboBox
         width: Style.widthLong
         height: Style.height
-        textRole: qsTr("Description")
+        textRole: "Description"
         font.pointSize: Style.fontSize
         model: mediaDevices.audioInputs
         background: StyleRectangle {

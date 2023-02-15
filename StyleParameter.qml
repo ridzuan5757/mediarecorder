@@ -28,8 +28,8 @@ Row {
         width: Style.widthLong
         enabled: root.enabled
         displayText: currentText
-        textRole: qsTr("Text")
-        valueRole: qsTr("Value")
+        textRole: "Text"
+        valueRole: "Value"
         font.pointSize: Style.fontSize
         background: StyleRectangle {
             anchors.fill: parent

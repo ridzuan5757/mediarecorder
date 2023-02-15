@@ -26,6 +26,8 @@ qt_add_qml_module(appVideoRecorder
     RecordButton.qml
     SettingsEncoder.qml
     StyleParameter.qml
+    SettingsMetaData.qml
+    qmldir
 )
 
 set_target_properties(appVideoRecorder PROPERTIES
