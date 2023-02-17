@@ -10,6 +10,7 @@ Row {
     property bool captureVisible: false
     property alias audioInput: audioInputSelect.selected
     property alias camera: cameraSelect.selected
+    spacing: Style.interSpacing * Style.ratio
 
     Column {
         id: inputControls
@@ -43,6 +44,17 @@ Row {
     Column {
         id: optionButtons
         spacing: Style.intraSpacing
+
+        Button {
+            height: Style.height
+            width: Style.widthMedium
+            background: StyleRectangle {
+                anchors.fill: parent
+            }
+            onClicked: root.captureVisible = !root.captureVisible
+            text: qsTr("Captures")
+            font.pointSize: Style.fontSize
+        }
 
         Button {
             height: Style.height

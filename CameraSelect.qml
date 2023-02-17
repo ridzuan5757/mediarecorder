@@ -5,7 +5,8 @@ import QtMultimedia
 Row {
     id: root
     height: Style.height
-    property bool available: false
+    property bool available: (typeof comboBox.currentValue !== "undefined")
+                             && cameraSwitch.checked
     property Camera selected: available ? camera : null
 
     Camera {
@@ -33,7 +34,7 @@ Row {
         }
         displayText: typeof currentValue === "undefined" ? "Unavailable" : currentValue.description
         font.pointSize: Style.fontSize
-        textRole: "Description"
+        textRole: "description"
         onCurrentValueChanged: {
             if (typeof comboBox.currentValue !== "undefined") {
                 camera.cameraDevice = currentValue

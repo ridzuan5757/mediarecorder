@@ -41,7 +41,7 @@ Window {
         onRecorderStateChanged: state => {
                                     if (state === MediaRecorder.StoppedState) {
                                         root.contentOrientation = Qt.PrimaryOrientation
-                                        madiaList.append()
+                                        mediaList.append()
                                     } else if (state === MediaRecorder.RecordingState
                                                && captureSession.camera) {
                                         root.contentOrientation = root.screen.orientation
@@ -54,7 +54,7 @@ Window {
                                      mediaList.mediaUrl = url
                                  }
         onErrorOccurred: {
-            recordedErrorText.text = recorder.errorString
+            recorderErrorText.text = recorder.errorString
             recorderError.open()
         }
     }

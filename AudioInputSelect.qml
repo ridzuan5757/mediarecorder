@@ -2,7 +2,7 @@ import QtQuick
 import QtQuick.Controls
 import QtMultimedia
 
-Item {
+Row {
     id: root
     property bool available: false
     property AudioInput selected: available ? audioInput : null
@@ -26,7 +26,7 @@ Item {
         id: comboBox
         width: Style.widthLong
         height: Style.height
-        textRole: "Description"
+        textRole: "description"
         font.pointSize: Style.fontSize
         model: mediaDevices.audioInputs
         background: StyleRectangle {

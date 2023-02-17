@@ -28,8 +28,8 @@ Row {
         width: Style.widthLong
         enabled: root.enabled
         displayText: currentText
-        textRole: "Text"
-        valueRole: "Value"
+        textRole: "text"
+        valueRole: "value"
         font.pointSize: Style.fontSize
         background: StyleRectangle {
             anchors.fill: parent

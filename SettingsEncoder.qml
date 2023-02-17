@@ -31,23 +31,23 @@ Column {
         label: qsTr("Quality")
         model: ListModel {
             ListElement {
-                text: qsTr("Very Low")
+                text: "Very Low"
                 value: MediaRecorder.VeryLowQuality
             }
             ListElement {
-                text: qsTr("Low")
+                text: "Low"
                 value: MediaRecorder.LowQuality
             }
             ListElement {
-                text: qsTr("Normal")
+                text: "Normal"
                 value: MediaRecorder.NormalQuality
             }
             ListElement {
-                text: qsTr("High")
+                text: "High"
                 value: MediaRecorder.HighQuality
             }
             ListElement {
-                text: qsTr("Very High")
+                text: "Very High"
                 value: MediaRecorder.VeryHighQuality
             }
         }
