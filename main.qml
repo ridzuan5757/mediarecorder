@@ -124,7 +124,7 @@ Window {
 
             StyleRectangle {
                 Layout.alignment: Qt.AlignHCenter
-                visible: controls.settingVisible
+                visible: controls.settingsVisible
                 width: controls.width
                 height: 1
             }
@@ -132,7 +132,7 @@ Window {
             SettingsEncoder {
                 id: settingEncoder
                 Layout.alignment: Qt.AlignHCenter
-                visible: controls.settingVisible
+                visible: controls.settingsVisible
                 padding: Style.interSpacing
                 recorder: recorder
             }
@@ -140,7 +140,7 @@ Window {
             SettingsMetaData {
                 id: settingsMetaData
                 Layout.alignment: Qt.AlignCenter
-                visible: !Style.isMobile() && controls.settingVisible
+                visible: !Style.isMobile() && controls.settingsVisible
                 recorder: recorder
             }
         }

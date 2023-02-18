@@ -17,14 +17,19 @@ ColumnLayout {
     Connections {
         target: recorder
         function onMetaDataChanged() {
+
             metaDataModel.clear()
             for (var key in recorder.metaData.keys()) {
                 if (recorder.metaData.stringValue((key))) {
-                    metaDataModel.append()({
-                                               "text": recorder.metaDataKeyToString(
-                                                           key),
-                                               "value": key
-                                           })
+
+                    console.log("meta data value check")
+                    console.log(key)
+
+                    metaDataModel.append({
+                                             "text": recorder.metaData.metaDataKeyToString(
+                                                         key),
+                                             "value": key
+                                         })
                 }
             }
         }
@@ -145,7 +150,7 @@ ColumnLayout {
 
     ListView {
         id: listView
-        Layout.fillWidth: true
+        Layout.fillHeight: true
         Layout.minimumWidth: metaDataAdd.width
         spacing: Style.intraSpacing
         clip: true

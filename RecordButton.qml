@@ -8,6 +8,8 @@ Item {
     property int outerRadius: Style.height
     property int innerRadius: mouse.pressedButtons
                               === Qt.LeftButton ? outerRadius - 6 : outerRadius - 5
+    width: outerRadius * 2
+    height: outerRadius * 2
 
     signal clicked
 

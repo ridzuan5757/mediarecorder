@@ -6,8 +6,8 @@ import QtMultimedia
 Row {
     id: root
     required property MediaRecorder recorder
-    property bool settingVisible: false
-    property bool captureVisible: false
+    property bool settingsVisible: false
+    property bool capturesVisible: false
     property alias audioInput: audioInputSelect.selected
     property alias camera: cameraSelect.selected
     spacing: Style.interSpacing * Style.ratio
@@ -51,7 +51,7 @@ Row {
             background: StyleRectangle {
                 anchors.fill: parent
             }
-            onClicked: root.captureVisible = !root.captureVisible
+            onClicked: root.capturesVisible = !root.capturesVisible
             text: qsTr("Captures")
             font.pointSize: Style.fontSize
         }
@@ -62,7 +62,7 @@ Row {
             background: StyleRectangle {
                 anchors.fill: parent
             }
-            onClicked: root.settingVisible = !root.settingVisible
+            onClicked: root.settingsVisible = !root.settingsVisible
             text: qsTr("Settings")
             font.pointSize: Style.fontSize
         }
